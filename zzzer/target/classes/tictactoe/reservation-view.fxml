@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.tictactoe.ReservationController"
+            prefWidth="720" prefHeight="460">
+
+    <children>
+        <!-- ADD RESERVATION -->
+        <Label text="Add Reservation" layoutX="30" layoutY="20" style="-fx-font-size: 18;" />
+
+        <Label text="Customer #:" layoutX="30" layoutY="70"/>
+        <TextField fx:id="tfRCustNo" layoutX="150" layoutY="66" prefWidth="200"/>
+
+        <Label text="Check-in:" layoutX="30" layoutY="110"/>
+        <DatePicker fx:id="dpCheckIn" layoutX="150" layoutY="106" prefWidth="200"/>
+
+        <Label text="Check-out:" layoutX="30" layoutY="150"/>
+        <DatePicker fx:id="dpCheckOut" layoutX="150" layoutY="146" prefWidth="200"/>
+
+        <Label text="Room Type:" layoutX="30" layoutY="190"/>
+        <ChoiceBox fx:id="cbRoomType" layoutX="150" layoutY="186" prefWidth="200"/>
+
+        <Button text="Add" layoutX="150" layoutY="230" onAction="#addReservation"/>
+
+        <Separator layoutX="30" layoutY="275" prefWidth="660"/>
+
+        <!-- DELETE RESERVATION -->
+        <Label text="Delete Reservation" layoutX="30" layoutY="300" style="-fx-font-size: 18;" />
+        <Label text="Reservation #:" layoutX="30" layoutY="345"/>
+        <TextField fx:id="tfResId" layoutX="150" layoutY="341" prefWidth="200"/>
+        <Button text="Delete" layoutX="360" layoutY="340" onAction="#deleteReservation"/>
+    </children>
+</AnchorPane>

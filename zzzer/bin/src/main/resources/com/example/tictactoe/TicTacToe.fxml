@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="anchorRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoe.NewGuiController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <AnchorPane prefHeight="500.0" prefWidth="469.0" style="-fx-background-color: #F7DCB9;">
+                     <children>
+                        <Line endX="163.66668701171875" endY="450.0" layoutX="124.0" layoutY="-1.0" startX="163.6667022705078" startY="106.42403411865234" stroke="#5c381f" strokeLineCap="ROUND" strokeWidth="6.0" />
+                        <Line endX="163.66668701171875" endY="450.0" layoutY="-1.0" startX="163.6667022705078" startY="106.42403411865234" stroke="#5c381f" strokeLineCap="ROUND" strokeWidth="6.0" />
+                        <Line endX="42.66666793823242" endY="450.0000305175781" layoutX="8.0" layoutY="-114.0" startX="391.3333435058594" startY="450.0000305175781" stroke="#5c381f" strokeLineCap="ROUND" strokeWidth="6.0" />
+                        <Line endX="42.66666793823242" endY="450.0000305175781" layoutX="9.0" layoutY="-239.0" startX="391.3333435058594" startY="450.0000305175781" stroke="#5c381f" strokeLineCap="ROUND" strokeWidth="6.0" />
+                        <GridPane fx:id="gridPane" layoutX="32.0" layoutY="81.0" prefHeight="350.0" prefWidth="350.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Line fx:id="VLeft_line" endX="165.0" endY="425.0" startX="165.0" startY="133.0" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <rotationAxis>
+                                    <Point3D />
+                                 </rotationAxis>
+                                 <GridPane.margin>
+                                    <Insets right="15.0" top="20.0" />
+                                 </GridPane.margin>
+                              </Line>
+                              <Line fx:id="DRight_line" endX="165.0" endY="495.0" startX="459.33331298828125" startY="212.0004425048828" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Line fx:id="VMiddle_line" endX="163.0" endY="425.0" startX="163.0" startY="133.0" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets top="20.0" />
+                                 </GridPane.margin></Line>
+                              <Line fx:id="VRight_line" endX="163.0" endY="425.0" startX="163.0" startY="133.0" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets bottom="20.0" left="15.0" top="20.0" />
+                                 </GridPane.margin></Line>
+                              <Line fx:id="HTop_line" endX="165.0" endY="500.0" startX="465.0" startY="500.0" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0">
+                                 <GridPane.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" />
+                                 </GridPane.margin></Line>
+                              <Line fx:id="HMiddle_line" endX="165.0" endY="500.0" startX="465.0" startY="500.0" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin></Line>
+                              <Line fx:id="HBottom_line" endX="165.0" endY="500.0" startX="465.0" startY="500.0" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </GridPane.margin></Line>
+                              <Line fx:id="DLeft_line" endX="195.0" endY="655.0" startX="486.6666259765625" startY="936.0" stroke="#828f55" strokeLineCap="ROUND" strokeWidth="6.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Button fx:id="button00" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button01" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button02" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button10" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button11" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button12" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button22" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button20" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button21" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#828f55" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Calibri Bold" size="48.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="Header_lbl" alignment="CENTER" layoutX="48.0" layoutY="26.0" prefHeight="56.0" prefWidth="350.0" text="Tic Tac Toe Game" textFill="#5c381f">
+                           <font>
+                              <Font name="Calibri Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="447.0" prefHeight="500.0" prefWidth="355.0">
+               <children>
+                  <AnchorPane prefHeight="501.0" prefWidth="359.0" style="-fx-background-color: #DEAC80;">
+                     <children>
+                        <Label fx:id="Player1_lbl" layoutX="113.0" layoutY="60.0" prefHeight="31.0" prefWidth="192.0" style="-fx-border-color: #914F1E; -fx-background-radius: 20pt; -fx-border-radius: 20pt; -fx-background-color: white;" text="Player 1 Name" textFill="#5c381f">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="Calibri" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Player2_lbl" layoutX="113.0" layoutY="126.0" prefHeight="31.0" prefWidth="192.0" style="-fx-border-color: #914F1E; -fx-background-radius: 20pt; -fx-border-radius: 20pt; -fx-background-color: white;" text="Player 2 Name" textFill="#5c381f">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="Calibri" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="195.0" prefHeight="22.0" prefWidth="245.0" text="Score Board" textFill="#5c381f">
+                           <font>
+                              <Font name="Calibri Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="scoreBoard_lbl" alignment="TOP_LEFT" layoutX="40.0" layoutY="232.0" prefHeight="201.0" prefWidth="275.0" style="-fx-border-color: #914F1E; -fx-background-color: white;" textFill="#5c381f">
+                           <padding>
+                              <Insets left="40.0" top="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="X_lbl" alignment="CENTER" layoutX="64.0" layoutY="55.0" prefHeight="25.0" prefWidth="37.0" text="X" textFill="#828f55">
+                           <font>
+                              <Font name="Calibri Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="O_lbl" alignment="CENTER" layoutX="64.0" layoutY="121.0" prefHeight="25.0" prefWidth="37.0" text="O" textFill="#828f55">
+                           <font>
+                              <Font name="Calibri Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="reset_btn" cancelButton="true" layoutX="123.0" layoutY="446.0" mnemonicParsing="false" onAction="#switchToNew" prefHeight="25.0" prefWidth="109.0" styleClass="default-btn" stylesheets="@style.css" text="New Players" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

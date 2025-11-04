@@ -1,0 +1,41 @@
+.gradient-background {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%,  #F7DCB9,  #DEAC80);
+}
+.default-btn{
+    -fx-background-color: #828f55;
+    -fx-background-radius: 20pt;
+}
+.default-btn:hover{
+    -fx-background-color: #a7b088;
+}
+.default-button:pressed{
+    -fx-background-color: #565f38;
+}
+.general-lblStyle{
+	-fx-text-alignment: center;
+}
+.button {
+  -fx-border-color: transparent;
+}
+.button:focused {
+  -fx-focus-color: transparent;
+  -fx-faint-focus-color: transparent;
+}
+#filePathShow {
+  -fx-border-color: transparent;
+}
+#filePathShow:disabled {
+  -fx-border-color: transparent;
+}
+.file-path-field {
+    -fx-text-overrun: leading-ellipsis;
+}
+.text-field {
+    -fx-alignment: center-left;
+}
+.text-area .content {
+    -fx-alignment: center-left; /* or center-left */
+}
+.file-path-field {
+    -fx-text-overrun: leading-ellipsis; /* shows ... at the beginning */
+}

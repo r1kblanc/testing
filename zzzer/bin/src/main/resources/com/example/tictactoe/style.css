@@ -1,0 +1,16 @@
+.gradient-background {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%,  #F7DCB9,  #DEAC80);
+}
+.default-btn{
+    -fx-background-color: #828f55;
+    -fx-background-radius: 20pt;
+}
+.default-btn:hover{
+    -fx-background-color: #a7b088;
+}
+.default-button:pressed{
+    -fx-background-color: #565f38;
+}
+.general-lblStyle{
+	-fx-text-alignment: center;
+}
