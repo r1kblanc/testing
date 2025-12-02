@@ -15,7 +15,7 @@ public class DBConnection {
             throw new SQLException("UCanAccess driver not found", e);
         }
 
-        String url = "jdbc:ucanaccess://src/main/resources/db/Database1.accdb";
+        String url = "jdbc:ucanaccess://src/main/resources/tictactoe/Database1.accdb";
 
         // Return connection (reuse if already open)
         if (conn == null || conn.isClosed()) {

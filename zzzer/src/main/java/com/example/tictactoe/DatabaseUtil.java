@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class DatabaseUtil {
 
-    private static final String DB_PATH = "src/main/resources/db/Database1.accdb"; // full absolute path!
+    private static final String DB_PATH = "src/main/resources/tictactoe/Database1.accdb"; // full absolute path!
 
     public static Connection getConnection() {
         try {
