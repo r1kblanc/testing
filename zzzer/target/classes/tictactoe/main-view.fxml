@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.tictactoe.MainController"
-            prefWidth="900.0" prefHeight="600.0">
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoe.MainController">
 
     <top>
-        <MenuBar>
+        <MenuBar prefHeight="20.0" prefWidth="900.0">
             <menus>
                 <Menu text="Customer">
                     <items>
-                        <MenuItem text="Add new customer"    onAction="#showCustomerViewAdd"/>
-                        <MenuItem text="Delete customer"      onAction="#showCustomerViewDelete"/>
+                        <MenuItem onAction="#showCustomerViewAdd" text="Add new customer" />
+                        <MenuItem onAction="#showCustomerViewDelete" text="Delete customer" />
                     </items>
                 </Menu>
                 <Menu text="Reservation">
                     <items>
-                        <MenuItem text="Add reservation"      onAction="#showReservationAdd"/>
-                        <MenuItem text="Delete reservation"    onAction="#showReservationDelete"/>
+                        <MenuItem onAction="#showReservationAdd" text="Add reservation" />
+                        <MenuItem onAction="#showReservationDelete" text="Delete reservation" />
                     </items>
                 </Menu>
                 <Menu text="Search">
                     <items>
-                        <MenuItem text="By name"              onAction="#showSearchByName"/>
-                        <MenuItem text="Stay duration (by #)" onAction="#showSearchDuration"/>
-                        <MenuItem text="Total cost (by #)"    onAction="#showSearchTotalCost"/>
+                        <MenuItem onAction="#showSearchByName" text="By name" />
+                        <MenuItem onAction="#showSearchDuration" text="Stay duration (by #)" />
+                        <MenuItem onAction="#showSearchTotalCost" text="Total cost (by #)" />
                     </items>
                 </Menu>
                 <Menu text="Exit">
                     <items>
-                        <MenuItem text="Quit"                 onAction="#exitApp"/>
+                        <MenuItem onAction="#exitApp" text="Quit" />
                     </items>
                 </Menu>
             </menus>
@@ -41,6 +44,26 @@
 
     <!-- where sub-views load -->
     <center>
-        <AnchorPane fx:id="contentRoot"/>
+        <AnchorPane fx:id="contentRoot">
+         <children>
+            <ImageView fitHeight="147.0" fitWidth="118.0" layoutX="263.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/customer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="154.0" fitWidth="270.0" layoutX="450.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Reservation.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="149.0" fitWidth="170.0" layoutX="375.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="265.0" layoutY="105.0" mnemonicParsing="false" onAction="#showCustomerViewAdd" opacity="0.0" prefHeight="145.0" prefWidth="108.0" text="Add/Delete Customer" />
+            <Button layoutX="451.0" layoutY="105.0" mnemonicParsing="false" onAction="#showReservationAdd" opacity="0.0" prefHeight="144.0" prefWidth="269.0" text=" Add/Delete Reservation" />
+            <Button layoutX="374.0" layoutY="310.0" mnemonicParsing="false" onAction="#showSearchByName" opacity="0.0" prefHeight="150.0" prefWidth="152.0" text="Search" />
+         </children></AnchorPane>
     </center>
 </BorderPane>

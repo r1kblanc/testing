@@ -1,37 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.tictactoe.ReservationController"
-            prefWidth="720" prefHeight="460">
+<AnchorPane prefHeight="460" prefWidth="675.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoe.ReservationController">
 
     <children>
         <!-- ADD RESERVATION -->
-        <Label text="Add Reservation" layoutX="30" layoutY="20" style="-fx-font-size: 18;" />
+        <Label layoutX="264.0" layoutY="25.0" prefHeight="28.0" prefWidth="149.0" text="Add Reservation">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font></Label>
 
-        <Label text="Customer #:" layoutX="30" layoutY="70"/>
-        <TextField fx:id="tfRCustNo" layoutX="150" layoutY="66" prefWidth="200"/>
+        <Label layoutX="171.0" layoutY="71.0" text="Customer #:">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font></Label>
+        <TextField fx:id="tfRCustNo" layoutX="296.0" layoutY="68.0" prefWidth="200" />
 
-        <Label text="Check-in:" layoutX="30" layoutY="110"/>
-        <DatePicker fx:id="dpCheckIn" layoutX="150" layoutY="106" prefWidth="200"/>
+        <Label layoutX="180.0" layoutY="111.0" text="Check-in:">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font></Label>
+        <DatePicker fx:id="dpCheckIn" layoutX="296.0" layoutY="108.0" prefWidth="200" />
 
-        <Label text="Check-out:" layoutX="30" layoutY="150"/>
-        <DatePicker fx:id="dpCheckOut" layoutX="150" layoutY="146" prefWidth="200"/>
+        <Label layoutX="176.0" layoutY="151.0" text="Check-out:">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font></Label>
+        <DatePicker fx:id="dpCheckOut" layoutX="296.0" layoutY="148.0" prefWidth="200" />
 
-        <Label text="Room Type:" layoutX="30" layoutY="190"/>
-        <ChoiceBox fx:id="cbRoomType" layoutX="150" layoutY="186" prefWidth="200"/>
+        <Label layoutX="173.0" layoutY="191.0" text="Room Type:">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font></Label>
+        <ChoiceBox fx:id="cbRoomType" layoutX="296.0" layoutY="188.0" prefWidth="200" />
 
-        <Button text="Add" layoutX="150" layoutY="230" onAction="#addReservation"/>
+        <Button layoutX="258.0" layoutY="230.0" onAction="#addReservation" prefHeight="39.0" prefWidth="159.0" text="Add">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font></Button>
 
-        <Separator layoutX="30" layoutY="275" prefWidth="660"/>
+        <Separator layoutX="30" layoutY="278.0" prefHeight="0.0" prefWidth="616.0" />
 
         <!-- DELETE RESERVATION -->
-        <Label text="Delete Reservation" layoutX="30" layoutY="300" style="-fx-font-size: 18;" />
-        <Label text="Reservation #:" layoutX="30" layoutY="345"/>
-        <TextField fx:id="tfResId" layoutX="150" layoutY="341" prefWidth="200"/>
-        <Button text="Delete" layoutX="360" layoutY="340" onAction="#deleteReservation"/>
+        <Label layoutX="271.0" layoutY="291.0" text="Delete Reservation">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font></Label>
+        <Label layoutX="164.0" layoutY="348.0" text="Reservation #:">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font></Label>
+        <TextField fx:id="tfResId" layoutX="296.0" layoutY="344.0" prefWidth="200" />
+        <Button layoutX="259.0" layoutY="392.0" onAction="#deleteReservation" prefHeight="39.0" prefWidth="159.0" text="Delete">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font></Button>
     </children>
 </AnchorPane>

@@ -3,8 +3,12 @@ package com.example.tictactoe;
 
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -21,6 +25,8 @@ public class CustomerController {
     @FXML private TextField txtPhone;
     @FXML private TextField txtEmail;
     @FXML private TextField tfDeleteCustNo;
+
+    
 
     /**
      * Adds a new customer record into the Access database.
@@ -116,4 +122,21 @@ public class CustomerController {
         alert.setContentText(msg);      // Set the message text
         alert.showAndWait();            // Display the alert and wait for the user to close it
     }
+
+    // Future addition: Button Functionality within open windows
+    // @FXML private AnchorPane contentRoot;
+
+    // private void setContent(String fxml) throws Exception {
+    //     // FXML files are in the same package as this class
+    //     Node view = FXMLLoader.load(getClass().getResource(fxml));
+    //     AnchorPane.setTopAnchor(view, 0.0);
+    //     AnchorPane.setRightAnchor(view, 0.0);
+    //     AnchorPane.setBottomAnchor(view, 0.0);
+    //     AnchorPane.setLeftAnchor(view, 0.0);
+    //     contentRoot.getChildren().setAll(view);
+    // }
+
+    // @FXML private void showReservationAdd() throws Exception { setContent("/tictactoe/reservation-view.fxml"); }
+    // @FXML private void showSearchByName() throws Exception { setContent("/tictactoe/search-view.fxml"); }
+
 }
